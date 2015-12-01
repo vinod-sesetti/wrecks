@@ -1,10 +1,6 @@
-box: python:2.7-slim
-dev:
-  steps:
-    - pip-install
-    - internal/watch:
-        code: python app.py
-        reload: true
+box: wercker/python
+services:
+    - wercker/postgresql
 # Build definition
 build:
   # The steps that will be executed on build
@@ -15,6 +11,10 @@ build:
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
-        name: python unit test
+        name: run unit tests
         code: |
-          python app_test.py
+          python manage.py test -v2
+        name: extension test
+        code: |
+          PGPASSWORD=wercker psql -h $WERCKER_POSTGRESQL_HOST -p $WERCKER_POSTGRESQL_PORT -U postgres -d werckerdb1 -c 'CREATE EXTENSION IF NOT EXISTS hstore;'
+          PGPASSWORD=wercker psql -h $WERCKER_POSTGRESQL_HOST -p $WERCKER_POSTGRESQL_PORT -U postgres -d werckerdb1 -c 'CREATE EXTENSION IF NOT EXISTS pgcrypto;'
