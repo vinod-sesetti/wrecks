@@ -1,6 +1,6 @@
-box:python
+box: wercker/python
 services:
-    - postgresql
+    - wercker/postgresql
 # Build definition
 build:
   # The steps that will be executed on build
@@ -14,7 +14,3 @@ build:
         name: run unit tests
         code: |
           python manage.py test -v2
-        name: extension test
-        code: |
-          PGPASSWORD=wercker psql -h $WERCKER_POSTGRESQL_HOST -p $WERCKER_POSTGRESQL_PORT -U postgres -d werckerdb1 -c 'CREATE EXTENSION IF NOT EXISTS hstore;'
-          PGPASSWORD=wercker psql -h $WERCKER_POSTGRESQL_HOST -p $WERCKER_POSTGRESQL_PORT -U postgres -d werckerdb1 -c 'CREATE EXTENSION IF NOT EXISTS pgcrypto;'
