@@ -10,7 +10,7 @@ box: python
 
 build:
   steps:
-   - pip-install -r requirements.txt:
+   - pip-install:
         requirements_file: "requirements.txt"
 
 
@@ -19,5 +19,13 @@ box: python
 build:
   steps:
     - script:
-        name: Print
+        name: install requirements
+        code: pip install Django
+
+box: python
+
+build:
+  steps:
+    - script:
+        name: runnig test cases
         code: python manage.py test
