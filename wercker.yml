@@ -2,6 +2,13 @@ box: python
 
 build:
   steps:
+    - virtualenv:
+        name: setup virtual environment
+
+box: python
+
+build:
+  steps:
     - script:
         name: Print
         code: python show_env.py
