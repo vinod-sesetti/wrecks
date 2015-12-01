@@ -11,7 +11,7 @@ def index():
 
 @app.route('/cities.json')
 def cities():
-    data = ['Amsterdam', 'San Francisco', 'Berlin', 'New York','kakinada','hyderabd']
+    data = ['Amsterdam', 'San Francisco', 'Berlin', 'New York','kakinada','hyderabd','chennai','kolkata']
     resp = Response(json.dumps(data), status=200, mimetype='application/json')
     return resp
 
