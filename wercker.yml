@@ -5,10 +5,19 @@ build:
     - virtualenv:
         name: setup virtual environment
 
+
+box: python
+
+build:
+  steps:
+   - pip-install:
+        requirements_file: "requirements.txt"
+
+
 box: python
 
 build:
   steps:
     - script:
         name: Print
-        code: python show_env.py
+        code: print "hello"
