@@ -10,7 +10,7 @@ box: python
 
 build:
   steps:
-   - pip-install:
+   - pip-install -r requirements.txt:
         requirements_file: "requirements.txt"
 
 
