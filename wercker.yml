@@ -1,6 +1,6 @@
-box: wercker/python
+box:python
 services:
-    - wercker/postgresql
+    - postgresql
 # Build definition
 build:
   # The steps that will be executed on build
