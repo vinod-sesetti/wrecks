@@ -5,27 +5,35 @@ build:
     - virtualenv:
         name: setup virtual environment
 
-
-box: python
-
-build:
-  steps:
    - pip-install:
-        requirements_file: "requirements.txt"
+        requirements_file: "wrecks/requirements.txt"
+   - script:
+        name: build
+        code: |
+            python wrecks/manage.py test
 
 
-box: python
 
-build:
-  steps:
-    - script:
-        name: install requirements
-        code: pip install Django
+# box: python
 
-box: python
+# build:
+#   steps:
+#    - pip-install:
+#         requirements_file: "requirements.txt"
 
-build:
-  steps:
-    - script:
-        name: runnig test cases
-        code: python manage.py test
+
+# box: python
+
+# build:
+#   steps:
+#     - script:
+#         name: install requirements
+#         code: pip install Django
+
+# box: python
+
+# build:
+#   steps:
+#     - script:
+#         name: runnig test cases
+#         code: python manage.py test
