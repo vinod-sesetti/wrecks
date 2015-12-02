@@ -19,7 +19,9 @@ build:
                 name: python unit test
                 code: |
                   python --version
+                  pip install -r requirements.txt
                   pip list
+
 
 
 # box: python
