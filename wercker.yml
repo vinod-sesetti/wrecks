@@ -18,8 +18,8 @@ build:
         - script:
                 name: python unit test
                 code: |
-                  python -version
-                  Django -version
+                  python --version
+                  pip list
 
 
 # box: python
