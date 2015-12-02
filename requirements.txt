@@ -58,12 +58,10 @@ django-userena
 # wysiwyg uses ckeditor (in packages)
 django-wysiwyg
 django-coffeescript
-#django-aloha
--e hg+https://bitbucket.org/descent/django-aloha#egg=django-aloha
-
+django-aloha
 # changed to forked version 10/27/13 JJW
-#django-ide
--e git+https://github.com/jowolf/django-ide.git#egg=django-ide
+
+pip install django-ide
 
 # already included in django-shpaml, 12/27/14 JJW
 #shpaml==1.00b
@@ -85,10 +83,6 @@ django-taggit-templatetags
 #django-haystack
 # so install 2.0.0 beta:
 #-e git+https://github.com/toastdriven/django-haystack.git@master#egg=django-haystack
-# django-haystack is looking for models in grappelli dashboard module, for this the below is patch to fix this issue.
--e git+https://github.com/deschler/django-haystack.git@master#egg=django-haystack
-# solr?  n django-pgindex?
-whoosh
 
 #django-sociallogin
 #django-faq
@@ -114,11 +108,9 @@ BeautifulSoup
 
 # from brewpub django install - needed? a: yes! 9/9/13 JJW
 #django-codemirror2
--e git+https://github.com/jowolf/django-codemirror2.git#egg=django-codemirror2
+django-codemirror2
 
 # July 2012
-#django-social-auth
--e git+https://github.com/pythonforfacebook/facebook-sdk#egg=FacebookSDK
 
 # Django-social-auth is now deprecated in favor of python-social-auth,so install python-social-auth
 python-social-auth
@@ -164,7 +156,7 @@ django-memcache-status
 # needs to not list models while still in models.py...  for django 1.7 - for now, remove csvimport
 #-e git+https://github.com/edcrewe/django-csvimport.git#egg=django-csvimport
 # forked JJW 2/6/15 to fix runaway memory issue
--e git+https://github.com/jowolf/django-csvimport.git#egg=django-csvimport
+django-csvimport
 
 #10/18/14
 django-supervisor
@@ -203,11 +195,11 @@ pyjade
 # forked - DONE: Someday soon, recombine into a nicely installable single package with no symlinks required :)
 #--allow-external webelements
 
--e git+https://github.com/jowolf/Html2Shpaml.git#egg=html2shpaml
+#-e git+https://github.com/jowolf/Html2Shpaml.git#egg=html2shpaml
 
 # JJW 10/4-10/5/15
 django-extensions
 Werkzeug
 django-easy-select2
--e git+https://github.com/jowolf/django-webshell.git#egg=django-webshell
+#-e git+https://github.com/jowolf/django-webshell.git#egg=django-webshell
 
