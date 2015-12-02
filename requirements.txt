@@ -103,7 +103,7 @@ parsedatetime
 
 # June 2012 - from brewpub django install
 # can remove these when updating obdjects / templets:
-BeautifulSoup
+#BeautifulSoup
 #django-stylus
 
 # from brewpub django install - needed? a: yes! 9/9/13 JJW
