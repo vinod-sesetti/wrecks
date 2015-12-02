@@ -80,7 +80,7 @@ django-taggit==0.13.0
 django-taggit-templatetags
 
 # 1.2.7 has circular import loop:
-#django-haystack
+django-haystack
 # so install 2.0.0 beta:
 #-e git+https://github.com/toastdriven/django-haystack.git@master#egg=django-haystack
 
