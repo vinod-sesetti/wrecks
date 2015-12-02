@@ -26,7 +26,7 @@ django-robots
 python-memcached
 Sphinx
 PyYAML
-Pillow
+#Pillow
 
 # are we using this:
 #django_codemirror
