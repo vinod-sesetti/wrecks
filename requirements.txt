@@ -32,7 +32,7 @@ Pillow
 #django_codemirror
 
 #no, now in stheme: objects, stylus, minaml - docs app!
--e git+https://github.com/jowolf/django-quickpages.git#egg=django-quickpages
+#-e git+https://github.com/jowolf/django-quickpages.git#egg=django-quickpages
 
 # Mar 2012:
 # do we still need these post-satchmo:
