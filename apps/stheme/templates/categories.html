@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{#  WARNING: GENERATED FILE - EDITS WILL BE LOST  #}
+{#  GENERATED FROM: $apps_path/products/templets.yaml at line 174 on 2015-11-12 at 19:50:21 PST(GMT-0800)  #}
+
+
+{% load render_as_template %}
+
+{% block extra_head %}
+  <style>
+    .cat .image {
+      height: 200px;
+    }
+    .cat .image img {
+      margin: auto;
+    }
+    .cat .description {
+      text-align: center;
+      height: 160px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+
+  <h1>
+    eRacks Categories
+  </h1>
+
+  {% for category in categories %}
+    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+      <a href="{{ category.url }}" class="product cat">
+        <div class="image">
+          <img src="/{{ category.image.image }}" alt="{{ category.title }}" class="img-responsive">
+        </div>
+        <hr>
+        <div class="description">
+          <h3>
+            {{ category.name }}
+          </h3>
+          <p>
+            {{ category.blurb|safe }}
+          </p>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+{% endblock %}

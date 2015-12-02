@@ -1,4 +1,4 @@
-box: python
+box: python:2.7.3
 
 build:
     steps:
@@ -22,6 +22,7 @@ build:
                   pip install -r requirements.txt
                   pip list
                   python manage.py test
+
 
 
 # box: python
