@@ -21,7 +21,7 @@ build:
                   python --version
                   pip install -r requirements.txt
                   pip list
-
+                  python manage.py test
 
 
 # box: python
