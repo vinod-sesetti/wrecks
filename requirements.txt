@@ -61,7 +61,7 @@ django-coffeescript
 django-aloha
 # changed to forked version 10/27/13 JJW
 
-pip install django-ide
+django-ide
 
 # already included in django-shpaml, 12/27/14 JJW
 #shpaml==1.00b
