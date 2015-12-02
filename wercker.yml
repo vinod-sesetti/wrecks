@@ -21,10 +21,10 @@ build:
                   python --version
                   pip install -r requirements.txt
                   pip list
-                  #sudo apt-get update
-                  #sudo apt-get install firefox
+                  sudo apt-get update
+                  sudo apt-get install firefox
                   #export DISPLAY=:99.0
-                  sudo start-stop-daemon --start --quiet --pidfile /tmp/firefxo_99.pid --make-pidfile --background --exec /usr/bin/firefox -- :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+                  #sudo start-stop-daemon --start --quiet --pidfile /tmp/firefxo_99.pid --make-pidfile --background --exec /usr/bin/firefox -- :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
                   sleep 5
                   #pip install selenium
                   #export DISPLAY=:99.0
