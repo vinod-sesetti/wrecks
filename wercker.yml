@@ -15,11 +15,11 @@ build:
             packages: openssh-client
 
 
-		- script:
-		        name: python unit test
-		        code: |
-		          python -version
-		          Django -version
+        - script:
+                name: python unit test
+                code: |
+                  python -version
+                  Django -version
 
 
 # box: python
