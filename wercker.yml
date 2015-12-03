@@ -1,4 +1,4 @@
-box: python:2.7
+box: python
 
 build:
     steps:
@@ -20,6 +20,46 @@ build:
                 code: |
                   python --version
                   pip install -r requirements.txt
-                  pip install psycopg2
+                  pip list
                   python manage.py test
 
+
+# box: python
+
+# build:
+#   steps:
+#     - virtualenv:
+#         name: setup virtual environment
+
+#    - pip-install:
+#         requirements_file: "wrecks/requirements.txt"
+#    - script:
+#         name: build
+#         code: |
+#             python wrecks/manage.py test
+
+
+
+# box: python
+
+# build:
+#   steps:
+#    - pip-install:
+#         requirements_file: "requirements.txt"
+
+
+# box: python
+
+# build:
+#   steps:
+#     - script:
+#         name: install requirements
+#         code: pip install Django
+
+# box: python
+
+# build:
+#   steps:
+#     - script:
+#         name: runnig test cases
+#         code: python manage.py test
