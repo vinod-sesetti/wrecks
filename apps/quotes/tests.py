@@ -82,6 +82,10 @@ if settings.SELENIUM_DRIVER=='Firefox':
 elif settings.SELENIUM_DRIVER=='Chrome':
     if settings.CHROMEPRESENT:
         driver = webdriver.Chrome(executable_path=settings.CHROME_DRIVER_PATH)
+elif settings.SELENIUM_DRIVER=='Xvfb':
+    if settings.USEVIRTUALDISPLAY:
+        driver = True
+
 
 if driver:
     from django.test import LiveServerTestCase
